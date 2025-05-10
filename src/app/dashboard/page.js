@@ -108,7 +108,7 @@ export default async function DashboardPage() {
         <div className="bg-white shadow rounded-lg p-6">
           <h3 className="text-lg font-medium text-gray-900">Quick Actions</h3>
           <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <a
+            <Link
               href="/dashboard/events/create"
               className="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100"
             >
@@ -135,7 +135,7 @@ export default async function DashboardPage() {
                   Add a new event to your site
                 </p>
               </div>
-            </a>
+            </Link>
 
             <Link
               href="/dashboard/events"
