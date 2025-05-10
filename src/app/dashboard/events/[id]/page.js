@@ -20,7 +20,8 @@ async function getEvent(id) {
 }
 
 export default async function EditEventPage({ params }) {
-  const event = await getEvent(params.id);
+  const { id } = await params;
+  const event = await getEvent(id);
 
   return (
     <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">

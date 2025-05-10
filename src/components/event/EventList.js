@@ -110,7 +110,7 @@ export default function EventList({ events = [] }) {
                   Toggle Status
                 </button>
                 <Link
-                  href={`/event/${event.id}`}
+                  href={`/dashboard/events/${event.id}`}
                   className="text-indigo-600 hover:text-indigo-900"
                 >
                   Edit
