@@ -3,14 +3,30 @@
 import { useLanguage } from '@/context/LanguageContext';
 
 export function LanguageToggle() {
-  const { toggleLanguage, t } = useLanguage();
+  const { language, toggleLanguage } = useLanguage();
 
   return (
-    <button
-      onClick={toggleLanguage}
-      className="px-4 py-2 bg-button-blue-gradient text-white rounded-md hover:opacity-90 transition-opacity"
-    >
-      {t('buttons.languageToggle')}
-    </button>
+    <div className="flex rounded-md overflow-hidden font-poppins text-shadow">
+      <button
+        onClick={() => language !== 'en' && toggleLanguage()}
+        className={`cursor-pointer text-xl text-shadow px-3 py-1 transition-all ${
+          language === 'en'
+            ? 'bg-button-blue-gradient text-white'
+            : 'bg-white/20 hover:bg-white/30'
+        }`}
+      >
+        EN
+      </button>
+      <button
+        onClick={() => language !== 'de' && toggleLanguage()}
+        className={`cursor-pointer text-xl text-shadow px-3 py-1 transition-all ${
+          language === 'de'
+            ? 'bg-button-blue-gradient text-white'
+            : 'bg-white/20 hover:bg-white/30'
+        }`}
+      >
+        DE
+      </button>
+    </div>
   );
 }

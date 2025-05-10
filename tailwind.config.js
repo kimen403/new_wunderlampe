@@ -16,11 +16,6 @@ module.exports = {
         'white': '#FFFFFF',
         'black': '#171717',
       },
-      fontFamily: {
-        'aladin': ['var(--font-aladin)'],
-        'jetbrains': ['var(--font-jetbrains)'],
-        'poppins': ['var(--font-poppins)'],
-      },
     },
   },
   plugins: [],
