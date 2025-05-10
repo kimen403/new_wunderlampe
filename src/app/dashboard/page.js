@@ -1,6 +1,6 @@
 import prisma from "@/lib/prisma";
 import StatsCard from "@/components/dashboard/StatsCard";
-
+import Link from "next/link";
 async function getStats() {
   try {
     const totalEvents = await prisma.event.count();
@@ -137,7 +137,7 @@ export default async function DashboardPage() {
               </div>
             </a>
 
-            <a
+            <Link
               href="/dashboard/events"
               className="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100"
             >
@@ -164,7 +164,7 @@ export default async function DashboardPage() {
                   View and edit your events
                 </p>
               </div>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
