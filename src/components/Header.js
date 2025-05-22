@@ -2,12 +2,17 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useLanguage } from "@/context/LanguageContext";
 import { LanguageToggle } from "./LanguageToggle";
-import { FaFacebook,FaInstagramSquare } from "react-icons/fa";
 
 export function Header() {
   const { t } = useLanguage();
+  const pathname = usePathname();
+
+  const isActive = (path) => {
+    return pathname === path ? 'text-[#DBAC53]' : 'text-black';
+  };
 
   return (
     <header className="fixed left-1/2 -translate-x-1/2 top-[69px] bg-white text-black z-50 w-[1082px] h-[67px] rounded-4xl">
@@ -26,16 +31,16 @@ export function Header() {
           
           {/* Left: Navigation */}
           <nav className="flex gap-12 text-lg font-bold text-shadow">
-            <Link href="/" className="hover:opacity-80 transition-opacity font-poppins">
+            <Link href="/" className={`hover:opacity-80 transition-opacity font-poppins ${isActive('/')}`}>
               {t('nav.home')}
             </Link>
-            <Link href="/about" className="hover:opacity-80 transition-opacity font-poppins">
+            <Link href="/about" className={`hover:opacity-80 transition-opacity font-poppins ${isActive('/about')}`}>
               {t('nav.about')}
             </Link>
-            <Link href="/gallery" className="hover:opacity-80 transition-opacity font-poppins">
+            <Link href="/gallery" className={`hover:opacity-80 transition-opacity font-poppins ${isActive('/gallery')}`}>
               {t('nav.gallery')}
             </Link>
-            <Link href="/contact" className="hover:opacity-80 transition-opacity font-poppins">
+            <Link href="/contact" className={`hover:opacity-80 transition-opacity font-poppins ${isActive('/contact')}`}>
               {t('nav.contact')}
             </Link>
           </nav>
