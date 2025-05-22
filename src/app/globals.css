@@ -179,13 +179,13 @@
 
 @keyframes sway3D {
   0% {
-    transform: perspective(1000px) rotateY(-15deg);
+    transform: perspective(1000px) rotateY(-25deg);
   }
   50% {
     transform: perspective(1000px) rotateY(15deg);
   }
   100% {
-    transform: perspective(1000px) rotateY(-15deg);
+    transform: perspective(1000px) rotateY(-25deg);
   }
 }
 
