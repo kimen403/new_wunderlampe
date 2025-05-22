@@ -9,14 +9,31 @@
   --color-lilac: #A596C1;
   --color-white: #FFFFFF;
   --color-black: #171717;
-  --color-brown: #784A00;
-  --color-yellow: #FECA02;
+  --color-brown: #28160A;
+  --color-yellow: rgb(185, 135, 59);
+  
 
   --color-success: #2e7d32;
   --color-warning: #ed6c02;
   --color-error: #d32f2f;
   --color-info: #3293ab;
 
+}
+
+.bg-white {
+  background-color: var(--color-white);
+}
+
+.bg-brown {
+  background-color: var(--color-brown);
+}
+
+.bg-yellow {
+  background-color: var(--color-yellow);
+}
+.bg-yellow-30 {
+  background-color: rgba(185, 135, 59, 0.3);
+  
 }
 
 .bg-body-gradient {
@@ -93,4 +110,38 @@
     var(--color-blue) 100%
   ) padding-box,
               linear-gradient(to right, var(--color-brown) 0%, var(--color-yellow) 50%, var(--color-brown) 100%) border-box;
+}
+
+/* Swiper Navigation Styles */
+.swiper-button-prev,
+.swiper-button-next {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 40px !important;
+  height: 40px !important;
+  background-color: #28160A !important;
+  border-radius: 50% !important;
+  position: absolute !important;
+  z-index: 10 !important;
+}
+
+.swiper-button-prev {
+  left: -50px !important;
+}
+
+.swiper-button-next {
+  right: 0px !important;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 20px !important;
+  font-weight: bold !important;
+  color: #FFFFFF !important;
+}
+
+.swiper-button-disabled {
+  opacity: 0.8 !important;
+  cursor: not-allowed !important;
 }

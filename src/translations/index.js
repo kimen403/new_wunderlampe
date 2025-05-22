@@ -10,7 +10,7 @@ export const translations = {
     },
     buttons: {
       languageToggle: "Switch to Deutsch",
-      reservation: "Book Now"
+      reservation: "Reservation"
     },
     business: {
       description: "Restaurant & Lieferservice",
@@ -42,7 +42,7 @@ export const translations = {
     },
     buttons: {
       languageToggle: "Switch to English",
-      reservation: "Jetzt Buchen"
+      reservation: "Reservierung"
     },
     business: {
       description: "Restaurant & Lieferservice",

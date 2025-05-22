@@ -10,11 +10,22 @@ export function Header() {
   const { t } = useLanguage();
 
   return (
-    <header className="sticky top-0 bg-header-gradient text-white z-50">
-      <div className="container mx-auto px-4 py-4">
-        <div className="flex justify-between items-center">
+    <header className="fixed left-1/2 -translate-x-1/2 top-[69px] bg-white text-black z-50 w-[1082px] h-[67px] rounded-4xl">
+      <div className="h-full px-14 flex items-center">
+        <div className="w-full flex justify-between items-center">
+          {/* Middle: Logo */}
+          <div className="logo-shadow">
+            <Image
+              src="/logo_header.png"
+              alt="Logo"
+              width={107}
+              height={52}
+              priority
+            />
+          </div>
+          
           {/* Left: Navigation */}
-          <nav className="flex gap-12 text-3xl text-shadow">
+          <nav className="flex gap-12 text-lg font-bold text-shadow">
             <Link href="/" className="hover:opacity-80 transition-opacity font-poppins">
               {t('nav.home')}
             </Link>
@@ -29,36 +40,17 @@ export function Header() {
             </Link>
           </nav>
 
-          {/* Middle: Logo */}
-          <div className="logo-shadow">
-            <Image
-              src="/logo_header.png"
-              alt="Logo"
-              width={150}
-              height={60}
-              priority
-            />
-          </div>
 
           {/* Right: Social Links, Language Toggle, and Reservation */}
           <div className="flex items-center gap-6">
-            {/* Social Media Icons */}
-            <div className="flex gap-4 text-shadow">
-              <Link href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
-                <FaFacebook className="w-[24px] h-[24px]" />
-              </Link>
-              <Link href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
-                <FaInstagramSquare className="w-[24px] h-[24px]" />
-              </Link>
-            </div>
 
+            {/* Reservation Button */}
+            <button className="cursor-pointer text-lg text-white font-bold px-5 py-2 bg-brown rounded-4xl hover:opacity-80 transition-all font-poppins text-shadow button-shadow">
+              {t('buttons.reservation')}
+            </button>
             {/* Language Toggle */}
             <LanguageToggle />
 
-            {/* Reservation Button */}
-            <button className="cursor-pointer text-3xl px-6 py-2 bg-button-blue-gradient rounded-md hover:opacity-80 transition-all font-poppins text-shadow button-shadow">
-              {t('buttons.reservation')}
-            </button>
           </div>
         </div>
       </div>

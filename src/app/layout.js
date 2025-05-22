@@ -37,7 +37,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="de">
       <body
-        className={`${aladin.className} antialiased bg-body-gradient font-poppins`}
+        className={`${poppins.className} antialiased bg-white font-poppins`}
       >
         <LanguageProvider>
           <Header />
