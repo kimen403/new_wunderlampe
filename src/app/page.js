@@ -7,7 +7,7 @@ import { Business } from "@/components/Business";
 import { Profile } from "@/components/Profile";
 import { Maps } from "@/components/Maps";
 import { Awards } from "@/components/Awards";
-import { Gallery } from "@/components/Gallery";
+
 import { Footer } from "@/components/Footer";
 
 export default function Home() {
@@ -18,7 +18,7 @@ export default function Home() {
       <Hero />
       <Business />
       <Profile />
-      <section className="relative h-[1437px]">
+      <section className="relative h-[1750px]">
         <Image
           src="/bg.png"
           alt=""
@@ -29,7 +29,7 @@ export default function Home() {
         <div className="relative z-10">
           <Awards />
           <Maps />
-          <Gallery />
+          
         </div>
       </section>
       <Footer />

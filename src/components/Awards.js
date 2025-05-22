@@ -5,11 +5,13 @@ import { Navigation } from 'swiper/modules';
 import Image from 'next/image';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import { useLanguage } from "@/context/LanguageContext";
 
 export function Awards() {
+  const { t } = useLanguage();
   return (
     <section className="w-full py-12 px-[50px]">
-      <h2 className="text-black py-10 text-center text-4xl font-extrabold w-full text-shadow">wir sind bekannt aus</h2>
+      <h2 className="text-black py-10 text-center text-4xl font-extrabold w-full text-shadow">{t('awards.title')}</h2>
       <div className="relative max-w-[1082px] mx-auto">
         <Swiper
           modules={[Navigation]}

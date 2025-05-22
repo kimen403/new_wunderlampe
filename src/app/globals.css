@@ -9,7 +9,7 @@
   --color-lilac: #A596C1;
   --color-white: #FFFFFF;
   --color-black: #171717;
-  --color-brown: #28160A;
+  --color-brown: rgb(40, 22, 10);
   --color-yellow: rgb(185, 135, 59);
   
 
@@ -26,6 +26,10 @@
 
 .bg-brown {
   background-color: var(--color-brown);
+}
+
+.bg-brown-30 {
+  background-color: rgba(40, 22, 10, 0.308);
 }
 
 .bg-yellow {
@@ -142,6 +146,19 @@
 }
 
 .swiper-button-disabled {
-  opacity: 0.8 !important;
+  opacity: 0.5 !important;
   cursor: not-allowed !important;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-rotate {
+  animation: rotate 12s linear infinite;
 }
