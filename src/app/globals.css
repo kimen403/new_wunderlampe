@@ -11,13 +11,27 @@
   --color-black: #171717;
   --color-brown: #28160a;
   --color-yellow: #b9873b;
-  
+  --color-brown-dark: #28160A;
+  --color-brown-alt: #271601;
 
   --color-success: #2e7d32;
   --color-warning: #ed6c02;
   --color-error: #d32f2f;
   --color-info: #3293ab;
+}
 
+@keyframes gradientTransition {
+  0%, 100% {
+    background: linear-gradient(to right, var(--color-brown-dark), var(--color-brown-alt));
+  }
+  50% {
+    background: linear-gradient(to right, var(--color-brown-alt), var(--color-brown-dark));
+  }
+}
+
+.bg-gradient-transition {
+  animation: gradientTransition 8s ease-in-out infinite;
+  background-size: 200% 100%;
 }
 
 .bg-white {
@@ -161,4 +175,39 @@
 
 .animate-rotate {
   animation: rotate 12s linear infinite;
+}
+
+@keyframes sway3D {
+  0% {
+    transform: perspective(1000px) rotateY(-15deg);
+  }
+  50% {
+    transform: perspective(1000px) rotateY(15deg);
+  }
+  100% {
+    transform: perspective(1000px) rotateY(-15deg);
+  }
+}
+
+.animate-sway3D {
+  animation: sway3D 4s ease-in-out infinite;
+  transform-style: preserve-3d;
+}
+
+@keyframes contentGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  animation: contentGradient 12s ease-in-out infinite;
+  background-size: 200% 100%;
+  background-blend-mode: soft-light;
 }
