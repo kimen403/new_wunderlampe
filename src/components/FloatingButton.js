@@ -10,7 +10,7 @@ export function FloatingButton() {
   return (
     <button
       onClick={scrollToFooter}
-      className="fixed bottom-18 right-28 z-50 hover:scale-110 transition-transform"
+      className="fixed bottom-18 right-28 z-50 hover:scale-110 transition-transform cursor-pointer"
     >
       <Image
         src="/float.png"

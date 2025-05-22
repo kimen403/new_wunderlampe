@@ -9,7 +9,7 @@ import 'swiper/css/effect-fade';
 
 export function Hero() {
   return (
-    <section className="relative w-full h-[950px] z-0 card-shadow">
+    <section className="relative w-full h-[1150px] z-0 card-shadow">
       <Swiper
         modules={[Autoplay, EffectFade]}
         effect="fade"
@@ -26,48 +26,30 @@ export function Hero() {
             alt="Hero"
             fill
             priority
-            className="object-cover"
+            className=" "
             sizes="100vw"
             quality={100}
           />
         </SwiperSlide>
         <SwiperSlide>
           <Image
-            src="/hero1.png"
+            src="/hero.png"
             alt="Hero"
             fill
-            className="object-cover"
+            className=" "
             sizes="100vw"
             quality={100}
           />
         </SwiperSlide>
       </Swiper>
 
-      {/* Vignette Overlays */}
-      <div className="absolute inset-0 pointer-events-none">
-        <Image
-          src="/vtop.png"
-          alt=""
-          fill
-          className="object-cover z-10"
-          priority
-        />
-      </div>
-      <div className="absolute inset-0 pointer-events-none">
-        <Image
-          src="/vbot.png"
-          alt=""
-          fill
-          className="object-cover z-10"
-          priority
-        />
-      </div>
+
 
       {/* Social Media Bar */}
       <div className="absolute left-43 bottom-48 flex flex-col gap-6 z-20">
         <Link href="https://facebook.com" target="_blank" rel="noopener noreferrer">
           <Image
-            src="/fb.png"
+            src="/hero-fb.png"
             alt="Facebook"
             width={68}
             height={68}
@@ -76,7 +58,7 @@ export function Hero() {
         </Link>
         <Link href="https://instagram.com" target="_blank" rel="noopener noreferrer">
           <Image
-            src="/ig.png"
+            src="/hero-ig.png"
             alt="Instagram"
             width={68}
             height={68}
@@ -85,7 +67,7 @@ export function Hero() {
         </Link>
         <Link href="https://tiktok.com" target="_blank" rel="noopener noreferrer">
           <Image
-            src="/tt.png"
+            src="/hero-tt.png"
             alt="TikTok"
             width={68}
             height={68}

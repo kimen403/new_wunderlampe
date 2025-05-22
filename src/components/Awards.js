@@ -32,7 +32,7 @@ export function Awards() {
               alt={`Award ${num}`}
               width={185}
               height={263}
-              className="object-contain"
+              className="object-cover"
               priority
             />
           </SwiperSlide>
