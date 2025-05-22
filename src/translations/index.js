@@ -6,49 +6,94 @@ export const translations = {
       home: "HOME",
       about: "ABOUT US",
       gallery: "GALLERY",
-      contact: "CONTACT"
+      contact: "CONTACT",
     },
     buttons: {
       languageToggle: "Switch to Deutsch",
-      reservation: "RESERVATION"
+      reservation: "RESERVATION",
     },
     business: {
-      description: "Restaurant & Lieferservice",
-      address: "Street Address 123, City",
-      tel: "Tel: +49 123 456789",
-      service: {
-        services: "In House | Pickup | Delivery"
+      locations: {
+        restaurant: {
+          title: "",
+          description:
+            "Oriental restaurant with specialties from the grill and clay pot and much more",
+          address: "Lorenz-Kellner-Straße 1\n54290 Trier",
+          tel: "065156154448",
+          service: { services: "In House | Pickup | Delivery" },
+          buttons: { menu: "Menu", order: "Order", more: "See More" },
+        },
+        bistro: {
+          title: "",
+          description:
+            "Oriental bistro with bread pockets, salads & other typical regional snacks",
+          address: "Neustraße 3\n54290 Trier",
+          tel: "017641999996",
+          service: { services: "In House | Pickup | Delivery" },
+          buttons: { menu: "Menu", order: "Order", more: "See More" },
+        },
+        catering: {
+          title: "",
+          description:
+            "Catering\nWe offer Oriental food including Vegetarian, Vegan, Appetizers, Main Courses & Desserts",
+          address: "Lorenz-Kellner-Straße 1\n54290 Trier",
+          tel: "017641999996",
+          service: { services: "Parties | Events | And Much More" },
+          buttons: { menu: "Menu", order: "Inquiry", more: "See More" },
+        },
+        pizzaTrier: {
+          title: "Trier",
+          description:
+            "The perfect pizza, fresh from the oven, with crispy crust and your favorite toppings",
+          address: "Lorenz-Kellner-Straße 1\n54290 Trier",
+          tel: "065156154448",
+          service: { services: "Pickup | Delivery" },
+          buttons: { menu: "Menu", order: "Order", more: "See More" },
+        },
+        pizzaKenn: {
+          title: "Kenn",
+          description:
+            "The perfect pizza, fresh from the oven, with crispy crust and your favorite toppings",
+          address: "Triererstraße 57\n54344 Kenn",
+          tel: "015901196660",
+          service: { services: "Pickup | Delivery" },
+          buttons: { menu: "Menu", order: "Order", more: "See More" },
+        },
+        hwk: {
+          title: "",
+          description: "Die Wunderlampe for HWK Canteens",
+          buttons: {
+            weekTrier: "Weekly Menu Trier",
+            weekKenn: "Weekly Menu Kenn",
+            more: "See More",
+          },
+        },
       },
-      buttons: {
-        menu: "Menu",
-        order: "Order",
-        more: "See More"
-      }
     },
     profile: {
       title: `MORE THAN 13 YEARS OF EXPERIENCE, OVER 14 EMPLOYEES, 7 BRANCHES IN 4 LOCATIONS, 130 DISHES, 
               60% VEGETARIAN`,
-      description: "Welcome to Restaurant Die Wunderlampe. Immerse yourself in a fairy tale from A Thousand and One Nights! Oriental flair, exotic aromas and a lovingly designed ambience await you inside and out. Whether cozy indoors or relaxed in the beer garden. Enjoy our diverse specialties for every taste: hearty or light, exotic or classic, vegetarian-vegan or with meat.",
-      button: "See More"
+      description:
+        "Welcome to Restaurant Die Wunderlampe. Immerse yourself in a fairy tale from A Thousand and One Nights! Oriental flair, exotic aromas and a lovingly designed ambience await you inside and out. Whether cozy indoors or relaxed in the beer garden. Enjoy our diverse specialties for every taste: hearty or light, exotic or classic, vegetarian-vegan or with meat.",
+      button: "See More",
     },
     gallery: {
-      button: "To The Galleries"
+      button: "To The Galleries",
     },
     awards: {
-      title: "Awards & Recognition"
+      title: "Awards & Recognition",
     },
     maps: {
       title: "We look forward to welcoming you",
-      description: "Here you can find our locations"
+      description: "Here you can find our locations",
     },
     footer: {
       social: "find us here :",
       copyright: "©2025 Die Wunderlampe. All Rights Reserved.",
-      credits: "Design & Produced by The Ritz Media."
-    }
+      credits: "Design & Produced by The Ritz Media.",
+    },
   },
 
-  
   de: {
     title: "Die Wunderlampe",
     description: "Restaurant & Lieferservice",
@@ -56,45 +101,91 @@ export const translations = {
       home: "STARSEITE",
       about: "ÜBER UNS",
       gallery: "GALERIE",
-      contact: "KONTAKT"
+      contact: "KONTAKT",
     },
     buttons: {
       languageToggle: "Switch to English",
-      reservation: "RESERVIERUNG"
+      reservation: "RESERVIERUNG",
     },
     business: {
-      description: "Restaurant & Lieferservice",
-      address: "Straße 123, Stadt",
-      tel: "Tel: +49 123 456789",
-      service: {
-        services: "Im Haus | Abholung | Lieferung"
+      locations: {
+        restaurant: {
+          title: "",
+          description:
+            "Orientalisches Restaurant mit Spezialitäten vom Grill und aus dem Tontopf sowie vielen mehr",
+          address: "Lorenz-Kellner-Straße 1\n54290 Trier",
+          tel: "065156154448",
+          service: { services: "Im Haus | Abholung | Lieferung" },
+          buttons: { menu: "Menu", order: "Bestellung", more: "Siehe Mehr" },
+        },
+        bistro: {
+          title: "",
+          description:
+            "Orientalisches Bistro mit Brottaschen, Salaten & anderen landestypischen Snacks",
+          address: "Neustraße 3\n54290 Trier",
+          tel: "017641999996",
+          service: { services: "Im Haus | Abholung | Lieferung" },
+          buttons: { menu: "Menu", order: "Bestellung", more: "Siehe Mehr" },
+        },
+        catering: {
+          title: "",
+          description:
+            "Catering\nWir bitten Orientalisches Essen an Vegetarische, Vegan, Vorspeisen, Hauptspeisen & Dessert",
+          address: "Lorenz-Kellner-Straße 1\n54290 Trier",
+          tel: "017641999996",
+          service: { services: "Partys | Events | Und Viel Mehr" },
+          buttons: { menu: "Menu", order: "Anfrage", more: "Siehe Mehr" },
+        },
+        pizzaTrier: {
+          title: "Trier",
+          description:
+            "Die perfekte Pizza, frisch aus dem Ofen, mit knusprigem Rand und deinem Lieblingsbelag",
+          address: "Lorenz-Kellner-Straße 1\n54290 Trier",
+          tel: "065156154448",
+          service: { services: "Abholung | Lieferung" },
+          buttons: { menu: "Menu", order: "Bestellung", more: "Siehe Mehr" },
+        },
+        pizzaKenn: {
+          title: "Kenn",
+          description:
+            "Die perfekte Pizza, frisch aus dem Ofen, mit knusprigem Rand und deinem Lieblingsbelag",
+          address: "Triererstraße 57\n54344 Kenn",
+          tel: "015901196660",
+          service: { services: "Abholung | Lieferung" },
+          buttons: { menu: "Menu", order: "Bestellung", more: "Siehe Mehr" },
+        },
+        hwk: {
+          title: "",
+          description: "Die Wunderlampe für Kantinen der HWK",
+          buttons: {
+            weekTrier: "Wochenplan Trier",
+            weekKenn: "Wochenplan Kenn",
+            more: "Siehe Mehr",
+          },
+        },
       },
-      buttons: {
-        menu: "Speisekarte",
-        order: "Bestellung",
-        more: "Siehe mehr"
-      }
     },
     profile: {
       title: `MEHR ALS 13 JAHRE ERFAHRUNG, ÜBER 14 ANGESTELLTE, 7 FILLIALE IN 4 STANDORTE, 130 GERICHTE, 
               60% VEGETARISCH`,
-      description: "Willkommen im Restaurant Die Wunderlampe. Tauchen Sie ein in ein Märchen aus Tausendundeiner Nacht! Orientalisches Flair, exotische Düfte und ein liebevoll gestaltetes Ambiente erwarten Sie drinnen wie draußen. Ob gemütlich im Innenbereich oder entspannt im Biergarten. Genießen Sie unsere vielfältigen Spezialitäten für jeden Geschmack: herzhaft oder leicht, exotisch oder klassisch, vegetarisch-vegan oder mit Fleisch.",
-      button: "Siehe Mehr"
+      description:
+        "Willkommen im Restaurant Die Wunderlampe. Tauchen Sie ein in ein Märchen aus Tausendundeiner Nacht! Orientalisches Flair, exotische Düfte und ein liebevoll gestaltetes Ambiente erwarten Sie drinnen wie draußen. Ob gemütlich im Innenbereich oder entspannt im Biergarten. Genießen Sie unsere vielfältigen Spezialitäten für jeden Geschmack: herzhaft oder leicht, exotisch oder klassisch, vegetarisch-vegan oder mit Fleisch.",
+      button: "Siehe Mehr",
     },
     gallery: {
-      button: "Zu den Gallerien"
+      button: "Zu den Gallerien",
     },
     awards: {
-      title: "Auszeichnungen & Anerkennung"
+      title: "Auszeichnungen & Anerkennung",
     },
     maps: {
       title: "Wir freuen uns darauf, dich bei uns Willkommen zu heißen",
-      description: "Hier findest du unsere Standorten"
+      description: "Hier findest du unsere Standorten",
     },
     footer: {
       social: "finde uns hier :",
       copyright: "©2025 Die Wunderlampe. Alle Rechte vorbehalten.",
-      credits: "Design & Produced by The Ritz Media."
-    }
-  }
+      credits: "Design & Produced by The Ritz Media.",
+    },
+  },
 };
