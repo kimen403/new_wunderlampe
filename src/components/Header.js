@@ -49,10 +49,15 @@ export function Header() {
           {/* Right: Social Links, Language Toggle, and Reservation */}
           <div className="flex items-center gap-6">
 
-            {/* Reservation Button */}
-            <button className="cursor-pointer text-lg text-white font-bold px-5 py-2 bg-brown rounded-4xl hover:opacity-80 transition-all font-poppins text-shadow button-shadow">
+            {/* Reservation Link */}
+            <Link
+              href="https://app.resmio.com/infodiewunderlampe-trierde/widget"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cursor-pointer text-lg text-white font-bold px-5 py-2 bg-brown rounded-4xl hover:opacity-80 transition-all font-poppins text-shadow button-shadow"
+            >
               {t('buttons.reservation')}
-            </button>
+            </Link>
             {/* Language Toggle */}
             <LanguageToggle />
 

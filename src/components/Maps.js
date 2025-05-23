@@ -6,19 +6,19 @@ import { useLanguage } from "@/context/LanguageContext";
 export function Maps() {
   const { t } = useLanguage();
   return (
-    <section className="w-full h-[665px]">
-      <div className="bg-yellow-30 py-10 rounded-t-4xl">
-        <h2 className="text-black text-center text-4xl w-full text-shadow">
+    <section className="w-full h-auto md:h-[665px] overflow-hidden relative ">
+      <div className="bg-yellow-30 py-8 md:py-12 rounded-t-4xl overflow-hidden relative mx-4 md:mx-0">
+        <h2 className="text-black text-center text-2xl md:text-3xl lg:text-4xl w-full text-shadow mb-4">
           {t("maps.title")}
         </h2>
-        <h2 className="text-black text-center text-4xl font-extrabold w-full text-shadow">
+        <h2 className="text-black text-center text-xl md:text-2xl lg:text-4xl font-extrabold w-full text-shadow">
           {t("maps.description")}
         </h2>
       </div>
-      <div className="h-[480px] overflow-hidden relative w-full">
+      <div className="h-[300px] md:h-[480px] overflow-hidden relative w-full px-4 md:px-0">
         <iframe
           src="https://www.google.com/maps/d/u/0/embed?mid=1PcQgpiQb2Hwh84I64hmaH97loBEtmsE&ehbc=2E312F&noprof=1"
-          className="w-full h-[500px] -mt-15 border-0"
+          className="w-full h-[320px] md:h-[500px] -mt-15"
           loading="lazy"
         />
       </div>

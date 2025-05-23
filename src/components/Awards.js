@@ -10,8 +10,10 @@ import { useLanguage } from "@/context/LanguageContext";
 export function Awards() {
   const { t } = useLanguage();
   return (
-    <section className="w-full py-12 px-[50px]">
-      <h2 className="text-black py-10 text-center text-4xl font-extrabold w-full text-shadow">{t('awards.title')}</h2>
+    <section className="w-full py-6 md:py-8 lg:py-12 px-4 md:px-[50px]">
+      <h2 className="text-black py-6 md:py-10 text-center text-2xl md:text-3xl lg:text-4xl font-extrabold w-full text-shadow">
+        {t('awards.title')}
+      </h2>
       <div className="relative max-w-[1082px] mx-auto">
         <Swiper
           modules={[Navigation]}
@@ -20,8 +22,19 @@ export function Awards() {
             nextEl: '.custom-next',
             enabled: true
           }}
-          slidesPerView={4}
-          spaceBetween={30}
+          slidesPerView={1}
+          breakpoints={{
+            640: {
+              slidesPerView: 2
+            },
+            768: {
+              slidesPerView: 3
+            },
+            1024: {
+              slidesPerView: 4
+            }
+          }}
+          spaceBetween={20}
           loop={true}
           className="w-full"
         >
@@ -32,7 +45,7 @@ export function Awards() {
               alt={`Award ${num}`}
               width={185}
               height={263}
-              className="object-cover"
+              className="object-cover w-full h-auto max-w-[185px] mx-auto"
               priority
             />
           </SwiperSlide>

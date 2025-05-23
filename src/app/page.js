@@ -15,18 +15,19 @@ export default function Home() {
 
   return (
     <main className="min-h-screen">
-      <div className="relative h-[200px] bg-brown">
+      <div className="relative h-[150px] bg-brown">
       </div>
       <Hero />
       <Business />
       <Profile />
-      <section className="relative h-[1750px]">
+      <section className="relative h-auto min-h-[850px] md:min-h-[1250px] lg:h-[1750px]">
         <Image
           src="/bg.png"
           alt=""
           fill
           priority
-          className="object-cover"
+          className="object-cover object-center"
+          sizes="100vw"
         />
         <div className="relative z-10">
           <Awards />

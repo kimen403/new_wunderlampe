@@ -9,7 +9,7 @@ import 'swiper/css/effect-fade';
 
 export function Hero() {
   return (
-    <section className="relative w-full h-[1150px] z-0 card-shadow">
+    <section className="relative w-full h-[650px] md:h-[850px] lg:h-[1300px] z-0 card-shadow">
       <Swiper
         modules={[Autoplay, EffectFade]}
         effect="fade"
@@ -26,7 +26,7 @@ export function Hero() {
             alt="Hero"
             fill
             priority
-            className=" "
+            className="object-cover"
             sizes="100vw"
             quality={100}
           />
@@ -36,7 +36,7 @@ export function Hero() {
             src="/hero.png"
             alt="Hero"
             fill
-            className=" "
+            className="object-cover"
             sizes="100vw"
             quality={100}
           />
@@ -46,32 +46,32 @@ export function Hero() {
 
 
       {/* Social Media Bar */}
-      <div className="absolute left-43 bottom-48 flex flex-col gap-6 z-20">
-        <Link href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+      <div className="absolute hidden md:flex flex-col gap-6 z-20 left-8 md:left-23 bottom-12 md:bottom-18">
+        <Link href="https://www.facebook.com/wunderlampe.trier/?locale=de_DE" target="_blank" rel="noopener noreferrer">
           <Image
             src="/hero-fb.png"
             alt="Facebook"
-            width={68}
-            height={68}
-            className="hover:scale-110 transition-transform"
+            width={48}
+            height={48}
+            className="w-12 h-12 md:w-[68px] md:h-[68px] hover:scale-110 transition-transform"
           />
         </Link>
-        <Link href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+        <Link href="https://www.instagram.com/die_wunderlampe_trier/?hl=de" target="_blank" rel="noopener noreferrer">
           <Image
             src="/hero-ig.png"
             alt="Instagram"
-            width={68}
-            height={68}
-            className="hover:scale-110 transition-transform"
+            width={48}
+            height={48}
+            className="w-12 h-12 md:w-[68px] md:h-[68px] hover:scale-110 transition-transform"
           />
         </Link>
         <Link href="https://tiktok.com" target="_blank" rel="noopener noreferrer">
           <Image
             src="/hero-tt.png"
             alt="TikTok"
-            width={68}
-            height={68}
-            className="hover:scale-110 transition-transform"
+            width={48}
+            height={48}
+            className="w-12 h-12 md:w-[68px] md:h-[68px] hover:scale-110 transition-transform"
           />
         </Link>
       </div>
