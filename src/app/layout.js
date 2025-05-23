@@ -26,7 +26,7 @@ export const metadata = {
   title: "Wunderlampe Restaurant",
   description: "Authentic cuisine and delightful dining experiences",
   keywords: ["restaurant", "food", "dining"],
-  authors: [{ name: "Your Name" }],
+  authors: [{ name: "Devmosel" }],
   openGraph: {
     title: "Wunderlampe Restaurant",
     description: "Authentic cuisine and delightful dining experiences",
@@ -44,7 +44,7 @@ export const metadata = {
     icon: "/favicon.ico",
     apple: "/apple-icon.png",
   },
-  viewport: "width=device-width, initial-scale=1",
+
   robots: "index, follow",
 };
 
