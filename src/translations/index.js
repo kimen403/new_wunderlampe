@@ -130,7 +130,7 @@ export const translations = {
         catering: {
           title: "",
           description:
-            "Catering\nWir bitten Orientalisches Essen an Vegetarische, Vegan, Vorspeisen, Hauptspeisen & Dessert",
+            "Wir bitten Orientalisches Essen an Vegetarische, Vegan, Vorspeisen, Hauptspeisen & Dessert",
           address: "Lorenz-Kellner-Straße 1\n54290 Trier",
           tel: "017641999996",
           service: { services: "Partys | Events | Und Viel Mehr" },
