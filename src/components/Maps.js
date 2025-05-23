@@ -1,6 +1,6 @@
 "use client";
 
-import { Gallery } from "@/components/Gallery";
+
 import { useLanguage } from "@/context/LanguageContext";
 
 export function Maps() {
@@ -22,7 +22,7 @@ export function Maps() {
           loading="lazy"
         />
       </div>
-      <Gallery />
+      
     </section>
   );
 }
