@@ -8,6 +8,52 @@ import { SectionTransition } from "./SectionTransition";
 export function Business() {
   const { t } = useLanguage();
 
+  const data_business = [
+    {
+      type: "restaurant",
+      logo: 1,
+      linkMenu: "/menu",
+      linkOrder: "https://diewunderlampe.simplywebshop.de/storedata/listStore",
+      linkMore: "",
+    },
+    {
+      type: "bistro",
+      logo: 2,
+      linkMenu: "",
+      linkOrder:
+        "https://www.lieferando.de/speisekarte/das-wunderlampchen-neustrasse?utm_campaign=foodorder&utm_medium=organic&utm_source=google&shipping=collection",
+      linkMore: "",
+    },
+    {
+      type: "catering",
+      logo: 3,
+      linkMenu: "",
+      linkOrder:
+        "https://docs.google.com/forms/d/e/1FAIpQLScLp0ozBBCBsMMQ8HEVExjCRK_DAYQbO6y-EF1ceX6aYZbJzQ/viewform?usp=sharing&ouid=114658819105766817834",
+      linkMore: "",
+    },
+    {
+      type: "pizzaTrier",
+      logo: 4,
+      linkMenu: "",
+      linkOrder: "",
+      linkMore: "",
+    },
+    {
+      type: "pizzaKenn",
+      logo: 5,
+      linkMenu: "",
+      linkOrder: "https://www.lieferando.de/speisekarte/wunderpizza",
+      linkMore: "",
+    },
+    {
+      type: "hwk",
+      logo: 6,
+      linkMenu: "",
+      linkOrder: "",
+      linkMore: "",
+    },
+  ];
   return (
     <>
       <section
@@ -51,21 +97,19 @@ export function Business() {
         <div className="bottom-gradient"></div>
         <div className="w-full ">
           <div className="grid grid-cols-1 md:grid-cols-2 pt-20 pb-20 md:pb-20 lg:grid-cols-3 justify-items-stretch">
-            {[
-              { type: "restaurant", logo: 1 },
-              { type: "bistro", logo: 2 },
-              { type: "catering", logo: 3 },
-              { type: "pizzaTrier", logo: 4 },
-              { type: "pizzaKenn", logo: 5 },
-              { type: "hwk", logo: 6 },
-            ].map(({ type, logo }) => (
-              <BusinessCard
-                key={type}
-                locationType={type}
-                logoNumber={logo}
-                t={t}
-              />
-            ))}
+            {data_business.map(
+              ({ type, logo, linkMenu, linkOrder, linkMore }) => (
+                <BusinessCard
+                  key={type}
+                  locationType={type}
+                  logoNumber={logo}
+                  linkMenu={linkMenu}
+                  linkOrder={linkOrder}
+                  linkMore={linkMore}
+                  t={t}
+                />
+              )
+            )}
           </div>
         </div>
       </section>

@@ -1,11 +1,32 @@
 "use client";
 
 import Image from "next/image";
+import Router from "next/router";
 
-export function BusinessCard({ locationType, logoNumber, t }) {
+export function BusinessCard({
+  locationType,
+  logoNumber,
+  t,
+  linkMenu,
+  linkOrder,
+  linkMore,
+}) {
+  const onClickMenu = () => {
+    window.location.href = linkMenu;
+    console.log("Menu button clicked");
+  };
+  const onClickOrder = () => {
+    window.location.href = linkOrder;
+    console.log("Order button clicked");
+  };
+  const onClickMore = () => {
+    window.location.href = linkMore;
+    console.log("More button clicked");
+  };
+
   return (
     <div
-      className="relative w-full min-h-[650px] md:min-h-[600px] lg:min-h-[700px] md:pt-10 md:aspect-[3/4] overflow-hidden shadow-lg shadow-black/30 transition-all duration-1000 gradient-edges rounded-2xl inset-0 "
+      className="relative w-full min-h-[650px] md:min-h-[600px] lg:min-h-[700px] md:pt-10 md:aspect-[3/4] overflow-hidden shadow-lg transition-all duration-1000 gradient-edges rounded-2xl  "
       style={{
         backgroundImage: 'url("/business/card/bg_card.svg")',
         backgroundSize: "cover",
@@ -34,27 +55,45 @@ export function BusinessCard({ locationType, logoNumber, t }) {
           <div className="mt-2 flex flex-col gap-2 sm:gap-3 md:gap-4 items-center">
             {locationType === "hwk" ? (
               <div className="flex pt-6 md:pt-10 flex-col gap-3 pb-25 md:pb-0">
-                <button className="h-[32px] hover:scale-105 md:h-[36px] bg-[#B9873B] text-[#FFFFFF] rounded-2xl px-6 md:px-8 text-sm md:text-base font-poppins font-bold button-shadow">
+                <button
+                  onClick={onClickMenu}
+                  className="h-[32px] cursor-pointer  hover:scale-105 md:h-[36px] bg-[#B9873B] text-[#FFFFFF] rounded-2xl px-6 md:px-8 text-sm md:text-base font-poppins font-bold button-shadow"
+                >
                   {t(`business.locations.${locationType}.buttons.weekTrier`)}
                 </button>
-                <button className="h-[32px] hover:scale-105 md:h-[36px] bg-[#B9873B] text-[#FFFFFF] rounded-2xl px-6 md:px-8 text-sm md:text-base font-poppins font-bold button-shadow">
+                <button
+                  onClick={onClickOrder}
+                  className="h-[32px] cursor-pointer hover:scale-105 md:h-[36px] bg-[#B9873B] text-[#FFFFFF] rounded-2xl px-6 md:px-8 text-sm md:text-base font-poppins font-bold button-shadow"
+                >
                   {t(`business.locations.${locationType}.buttons.weekKenn`)}
                 </button>
-                <button className="h-[32px] hover:scale-105 md:h-[36px] bg-[#B9873B] text-[#FFFFFF] rounded-2xl px-6 md:px-8 text-sm md:text-base font-poppins font-bold button-shadow">
+                <button
+                  onClick={onClickMore}
+                  className="h-[32px] cursor-pointer hover:scale-105 md:h-[36px] bg-[#B9873B] text-[#FFFFFF] rounded-2xl px-6 md:px-8 text-sm md:text-base font-poppins font-bold button-shadow"
+                >
                   {t(`business.locations.${locationType}.buttons.more`)}
                 </button>
               </div>
             ) : (
               <>
                 <div className="flex flex-row gap-3 mt-6">
-                  <button className="h-[32px] hover:scale-105 md:h-[36px] bg-[#B9873B] text-[#FFFFFF] rounded-2xl px-6 md:px-8 text-sm md:text-base font-poppins font-bold button-shadow">
+                  <button
+                    onClick={onClickMenu}
+                    className="h-[32px] cursor-pointer hover:scale-105 md:h-[36px] bg-[#B9873B] text-[#FFFFFF] rounded-2xl px-6 md:px-8 text-sm md:text-base font-poppins font-bold button-shadow"
+                  >
                     {t(`business.locations.${locationType}.buttons.menu`)}
                   </button>
-                  <button className="h-[32px] hover:scale-105 md:h-[36px] bg-[#B9873B] text-[#FFFFFF] rounded-2xl px-6 md:px-8 text-sm md:text-base font-poppins font-bold button-shadow">
+                  <button
+                    onClick={onClickOrder}
+                    className="h-[32px] cursor-pointer hover:scale-105 md:h-[36px] bg-[#B9873B] text-[#FFFFFF] rounded-2xl px-6 md:px-8 text-sm md:text-base font-poppins font-bold button-shadow"
+                  >
                     {t(`business.locations.${locationType}.buttons.order`)}
                   </button>
                 </div>
-                <button className="h-[32px] hover:scale-105 md:h-[36px] bg-[#B9873B] text-[#FFFFFF] rounded-2xl px-6 md:px-8 text-sm md:text-base font-poppins font-bold button-shadow">
+                <button
+                  onClick={onClickMore}
+                  className="h-[32px] cursor-pointer hover:scale-105 md:h-[36px] bg-[#B9873B] text-[#FFFFFF] rounded-2xl px-6 md:px-8 text-sm md:text-base font-poppins font-bold button-shadow"
+                >
                   {t(`business.locations.${locationType}.buttons.more`)}
                 </button>
               </>

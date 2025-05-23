@@ -19,7 +19,7 @@ export function Footer() {
         </div>
 
         {/* Right Column: Logo */}
-        <div className="flex items-center mt-6 md:mt-0">
+        <div className="flex items-center hover:scale-110 mt-6 md:mt-0">
           <Image
             src="/logo_header.png"
             alt="Logo"

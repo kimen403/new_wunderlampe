@@ -34,7 +34,7 @@ export function Hero() {
         <SwiperSlide>
           <Image
             src="/hero.png"
-            alt="Hero"
+            alt="Hero2"
             fill
             className="object-cover"
             sizes="100vw"
