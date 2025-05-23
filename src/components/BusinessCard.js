@@ -4,9 +4,16 @@ import Image from "next/image";
 
 export function BusinessCard({ locationType, logoNumber, t }) {
   return (
-    <div className="relative w-full min-h-[500px] md:min-h-[600px] lg:min-h-[600px] pt-20  md:aspect-[3/4] overflow-hidden   shadow-lg shadow-black/30 transition-all duration-1000 gradient-edges">
+    <div
+      className="relative w-full min-h-[650px] md:min-h-[600px] lg:min-h-[700px] md:pt-10 md:aspect-[3/4] overflow-hidden shadow-lg shadow-black/30 transition-all duration-1000 gradient-edges rounded-2xl inset-0 "
+      style={{
+        backgroundImage: 'url("/business/card/bg_card.svg")',
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       {/* Content */}
-      <div className="relative inset-0 z-[2] flex flex-col items-center justify-start p-0 md:p-0 h-full">
+      <div className="relative inset-0 z-[2] flex flex-col items-center justify-start p-20 md:p-0 h-full">
         {/* Logo */}
         <div className="flex items-center justify-center">
           <Image
@@ -20,7 +27,7 @@ export function BusinessCard({ locationType, logoNumber, t }) {
         </div>
         {/* Text Content */}
         <div className="text-white pt-6 md:pt-0 text-center text-sm md:text-base text-shadow max-w-[85%] md:max-w-[75%]">
-          <p className="description whitespace-pre-line">
+          <p className="description whitespace-pre-line max-w-[250px] md:max-w-[320px] mx-auto">
             {t(`business.locations.${locationType}.description`)}
           </p>
 

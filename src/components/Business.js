@@ -50,7 +50,7 @@ export function Business() {
         <div className="top-gradient"></div>
         <div className="bottom-gradient"></div>
         <div className="w-full ">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-stretch">
+          <div className="grid grid-cols-1 md:grid-cols-2 pt-20 pb-20 md:pb-20 lg:grid-cols-3 justify-items-stretch">
             {[
               { type: "restaurant", logo: 1 },
               { type: "bistro", logo: 2 },
