@@ -35,7 +35,7 @@ export const translations = {
         catering: {
           title: "",
           description:
-            "Catering\nWe offer Oriental food including Vegetarian, Vegan, Appetizers, Main Courses & Desserts",
+            "Catering : We offer Oriental food including Vegetarian, Vegan, Appetizers, Main Courses & Desserts",
           address: "Lorenz-Kellner-Straße 1\n54290 Trier",
           tel: "017641999996",
           service: { services: "Parties | Events | And Much More" },
@@ -61,7 +61,7 @@ export const translations = {
         },
         hwk: {
           title: "",
-          description: "Die Wunderlampe for HWK Canteens",
+          description: "Die Wunderlampe for Handwerkskammer Canteens",
           buttons: {
             weekTrier: "Weekly Menu Trier",
             weekKenn: "Weekly Menu Kenn",
@@ -156,7 +156,7 @@ export const translations = {
         },
         hwk: {
           title: "",
-          description: "Die Wunderlampe für Kantinen der HWK",
+          description: "Die Wunderlampe für Kantinen der Handwerkskammer",
           buttons: {
             weekTrier: "Wochenplan Trier",
             weekKenn: "Wochenplan Kenn",
@@ -166,8 +166,7 @@ export const translations = {
       },
     },
     profile: {
-      title: `MEHR ALS 13 JAHRE ERFAHRUNG, ÜBER 14 ANGESTELLTE, 7 FILLIALE IN 4 STANDORTE, 130 GERICHTE, 
-              60% VEGETARISCH`,
+      title: `Über 13 Jahre Erfahrung, 7 Filialen an 4 Standorten, 14 engagierte Mitarbeitende und 130 Gerichte – rund 60 % davon vegetarisch`,
       description:
         "Willkommen im Restaurant Die Wunderlampe. Tauchen Sie ein in ein Märchen aus Tausendundeiner Nacht! Orientalisches Flair, exotische Düfte und ein liebevoll gestaltetes Ambiente erwarten Sie drinnen wie draußen. Ob gemütlich im Innenbereich oder entspannt im Biergarten. Genießen Sie unsere vielfältigen Spezialitäten für jeden Geschmack: herzhaft oder leicht, exotisch oder klassisch, vegetarisch-vegan oder mit Fleisch.",
       button: "Siehe Mehr",

@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -25,35 +25,56 @@ export function Footer() {
             alt="Logo"
             width={305}
             height={150}
-            className="object-contain w-[200px] h-[98px] md:w-[305px] md:h-[150px]"
+            className="object-contain w-auto h-auto"
             priority
           />
         </div>
       </div>
       <div className="">
         {/* Social Links */}
-          <div className="flex flex-col items-center ">
-            <p className="text-lg py-2 md:text-2xl">{t('footer.social')}</p>
-            <div className="flex py-4 gap-5">
-              <Link href="https://www.facebook.com/wunderlampe.trier/?locale=de_DE" target="_blank" rel="noopener noreferrer" className="hover:opacity-80">
-                <Image src="/hero-fb.png" alt="Facebook" width={47} height={47} />
-              </Link>
-              <Link href="https://www.instagram.com/die_wunderlampe_trier/?hl=de" target="_blank" rel="noopener noreferrer" className="hover:opacity-80">
-                <Image src="/hero-ig.png" alt="Instagram" width={47} height={47} />
-              </Link>
-              <Link href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80">
-                <Image src="/hero-tt.png" alt="TikTok" width={47} height={47} />
-              </Link>
-            </div>
+        <div className="flex flex-col items-center ">
+          <p className="text-lg py-2 md:text-2xl">{t("footer.social")}</p>
+          <div className="flex py-4 gap-5">
+            <Link
+              href="https://www.facebook.com/wunderlampe.trier/?locale=de_DE"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-80"
+            >
+              <Image src="/hero-fb.png" alt="Facebook" width={47} height={47} />
+            </Link>
+            <Link
+              href="https://www.instagram.com/die_wunderlampe_trier/?hl=de"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-80"
+            >
+              <Image
+                src="/hero-ig.png"
+                alt="Instagram"
+                width={47}
+                height={47}
+              />
+            </Link>
+            <Link
+              href="https://tiktok.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-80"
+            >
+              <Image src="/hero-tt.png" alt="TikTok" width={47} height={47} />
+            </Link>
           </div>
+        </div>
       </div>
-      
+
       {/* Copyright Section */}
       <div className="border-t border-white/20">
         <div className="max-w-[1082px] mx-auto px-4 py-4 md:py-6">
           <p className="text-center text-sm md:text-md opacity-80">
-            {t('footer.copyright')}<br />
-            {t('footer.credits')}
+            {t("footer.copyright")}
+            <br />
+            {t("footer.credits")}
           </p>
         </div>
       </div>

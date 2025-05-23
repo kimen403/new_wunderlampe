@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useLanguage } from "@/context/LanguageContext";
 import { LanguageToggle } from "./LanguageToggle";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export function Header() {
   const { t } = useLanguage();
@@ -19,6 +19,18 @@ export function Header() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  // Close menu on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      if (isMenuOpen) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isMenuOpen]);
 
   return (
     <div className="">
@@ -56,6 +68,7 @@ export function Header() {
                 width={107}
                 height={52}
                 priority
+                className="object-contain w-auto h-auto"
               />
             </div>
 
@@ -97,12 +110,16 @@ export function Header() {
 
             {/* Mobile Menu */}
             <div
-              className={`fixed inset-0 bg-transparent z-10 transition-transform duration-300 ease-in-out ${
-                isMenuOpen ? "translate-x-0" : "translate-x-full"
+              className={`fixed inset-0 z-10 transition-transform duration-300 ease-in-out ${
+                isMenuOpen ? "translate-x-0" : "translate-x-full bg-transparent"
               } md:hidden`}
             >
-              <div className="pt-32 px-8 flex flex-col items-center gap-8">
-                <nav className="flex flex-col items-center gap-8 text-xl font-bold">
+              <div
+                className={`pt-32 px-8 flex ${
+                  isMenuOpen ? "bg-white rounded-4xl" : "bg-transparent"
+                } flex-col items-center gap-5 pb-10`}
+              >
+                <nav className="flex flex-col items-center gap-5 text-xl font-bold">
                   <Link
                     href="/"
                     onClick={toggleMenu}

@@ -1,6 +1,5 @@
 "use client";
 
-
 import { useLanguage } from "@/context/LanguageContext";
 
 export function Maps() {
@@ -18,11 +17,10 @@ export function Maps() {
       <div className="h-[300px] md:h-[480px] overflow-hidden relative w-full px-4 md:px-0">
         <iframe
           src="https://www.google.com/maps/d/u/0/embed?mid=1PcQgpiQb2Hwh84I64hmaH97loBEtmsE&ehbc=2E312F&noprof=1"
-          className="w-full h-[320px] md:h-[500px] -mt-15"
+          className="w-full h-[320px] md:h-[500px] -mt-13"
           loading="lazy"
         />
       </div>
-      
     </section>
   );
 }
