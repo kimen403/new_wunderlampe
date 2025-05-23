@@ -35,7 +35,7 @@ export const translations = {
         catering: {
           title: "",
           description:
-            "Catering : We offer Oriental food including Vegetarian, Vegan, Appetizers, Main Courses & Desserts",
+            "We offer Oriental food including Vegetarian, Vegan, Appetizers, Main Courses & Desserts",
           address: "Lorenz-Kellner-Straße 1\n54290 Trier",
           tel: "017641999996",
           service: { services: "Parties | Events | And Much More" },
