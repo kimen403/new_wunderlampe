@@ -4,15 +4,15 @@ import Image from "next/image";
 
 export function BusinessCard({ locationType, logoNumber, t }) {
   return (
-    <div className="relative w-full aspect-[4/5] overflow-hidden">
+    <div className="relative w-full aspect-[3/4] overflow-hidden">
       {/* Background */}
-      <Image
+      {/* <Image
         src="/business/card/BG_card.png"
         alt="Card Background"
         fill
         className="object-cover scale-[1.02] z-[1]"
         priority
-      />
+      /> */}
 
       {/* Content */}
       <div className="absolute inset-0 z-[2] flex flex-col items-center justify-start p-4 sm:p-6 max-h-full overflow-y-auto">
