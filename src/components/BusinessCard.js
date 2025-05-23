@@ -13,15 +13,12 @@ export function BusinessCard({
 }) {
   const onClickMenu = () => {
     window.location.href = linkMenu;
-    console.log("Menu button clicked");
   };
   const onClickOrder = () => {
     window.location.href = linkOrder;
-    console.log("Order button clicked");
   };
   const onClickMore = () => {
     window.location.href = linkMore;
-    console.log("More button clicked");
   };
 
   return (
