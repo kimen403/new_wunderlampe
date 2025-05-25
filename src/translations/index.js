@@ -78,6 +78,9 @@ export const translations = {
       button: "See More",
     },
     gallery: {
+      title: "Our Gallery",
+      description:
+        "Experience the atmosphere and culinary delights of Die Wunderlampe through our gallery",
       button: "To The Galleries",
     },
     awards: {
@@ -172,6 +175,9 @@ export const translations = {
       button: "Siehe Mehr",
     },
     gallery: {
+      title: "Unsere Galerie",
+      description:
+        "Erleben Sie die Atmosphäre und kulinarischen Köstlichkeiten der Wunderlampe durch unsere Galerie",
       button: "Zu den Gallerien",
     },
     awards: {

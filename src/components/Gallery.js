@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
+import Link from "next/link";
 
 export function Gallery() {
   const { t } = useLanguage();
@@ -43,9 +44,12 @@ export function Gallery() {
 
         {/* Button Container */}
         <div className="flex justify-center mt-8">
-          <button className="bg-brown text-white text-lg font-bold px-8 py-3 rounded-4xl hover:opacity-80 transition-all">
+          <Link
+            href={"/gallery"}
+            className="bg-brown text-white text-lg font-bold px-8 py-3 rounded-4xl hover:opacity-80 transition-all"
+          >
             {t("gallery.button")}
-          </button>
+          </Link>
         </div>
       </div>
     </section>
