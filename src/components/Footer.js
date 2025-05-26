@@ -21,7 +21,7 @@ export function Footer() {
         {/* Right Column: Logo */}
         <div className="flex items-center hover:scale-110 mt-6 md:mt-0">
           <Image
-            src="/logo_header.png"
+            src="/logo_header.gif"
             alt="Logo"
             width={305}
             height={150}

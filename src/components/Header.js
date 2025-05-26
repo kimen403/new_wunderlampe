@@ -63,12 +63,12 @@ export function Header() {
             {/* Logo */}
             <div className="logo-shadow z-20 absolute md:relative left-1/2 md:left-0 -translate-x-1/2 md:translate-x-0">
               <Image
-                src="/logo_header.png"
+                src="/logo_header.gif"
                 alt="Logo"
                 width={107}
                 height={52}
                 priority
-                className="object-contain w-auto h-auto"
+                className="object-contain "
               />
             </div>
 

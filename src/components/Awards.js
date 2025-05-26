@@ -71,7 +71,7 @@ export function Awards() {
                   <h3 className="text-2xl font-bold mb-4">{award.title}</h3>
                   <p className="text-lg leading-relaxed">{award.description}</p>
                 </div>
-                <div className="relative flex justify-center items-center order-1 md:order-2 mb-6 md:mb-0">
+                <div className="relative hover:scale-2xl flex justify-center items-center order-1 md:order-2 mb-6 md:mb-0">
                   <Image
                     src={award.image}
                     alt={`Award ${index + 1}`}
