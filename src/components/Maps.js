@@ -6,11 +6,11 @@ export function Maps() {
   const { t } = useLanguage();
   return (
     <section className="w-full h-auto md:h-[665px] overflow-hidden relative ">
-      <div className="bg-yellow-30 py-8 md:py-12 rounded-t-4xl overflow-hidden relative mx-4 md:mx-0">
-        <h2 className="text-black text-center text-2xl md:text-3xl lg:text-4xl w-full text-shadow mb-4">
+      <div className="bg-yellow-30 py-8 md:py-12 overflow-hidden relative mx-4 md:mx-0">
+        <h2 className="text-white text-center text-2xl md:text-3xl lg:text-4xl w-full text-shadow mb-4">
           {t("maps.title")}
         </h2>
-        <h2 className="text-black text-center text-xl md:text-2xl lg:text-4xl font-extrabold w-full text-shadow">
+        <h2 className="text-white text-center text-xl md:text-2xl lg:text-4xl font-extrabold w-full text-shadow">
           {t("maps.description")}
         </h2>
       </div>

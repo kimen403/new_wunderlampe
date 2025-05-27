@@ -174,7 +174,6 @@ export function Header() {
             {/* Right Side: Language Toggle (Mobile) & Reservation (Desktop) */}
             <div className="flex items-center gap-6">
               {/* Language Toggle (Mobile & Desktop) */}
-              <LanguageToggle />
               {/* Reservation Link (Desktop Only) */}
               <Link
                 href="https://app.resmio.com/infodiewunderlampe-trierde/widget"
@@ -184,6 +183,7 @@ export function Header() {
               >
                 {t("buttons.reservation")}
               </Link>
+              <LanguageToggle />
             </div>
           </div>
         </div>

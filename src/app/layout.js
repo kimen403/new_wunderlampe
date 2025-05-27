@@ -58,7 +58,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="de">
       <body
-        className={`${poppins.className} antialiased bg-white font-poppins`}
+        className={`${poppins.className} antialiased bg-brown max-w-[1400px] mx-auto font-poppins`}
       >
         <LanguageProvider>
           <Header />

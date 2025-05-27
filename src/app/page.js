@@ -1,5 +1,4 @@
-'use client';
-
+"use client";
 
 import { useLanguage } from "@/context/LanguageContext";
 import Image from "next/image";
@@ -7,17 +6,16 @@ import { Hero } from "@/components/Hero";
 import { Business } from "@/components/Business";
 import { Profile } from "@/components/Profile";
 import { Maps } from "@/components/Maps";
-import { Awards } from "@/components/Awards";
 import { Footer } from "@/components/Footer";
 import { Gallery } from "@/components/Gallery";
+import { AwardsHome } from "@/components/AwardsHome";
 
 export default function Home() {
   const { t } = useLanguage();
 
   return (
     <main className="min-h-screen">
-      <div className="relative h-[150px] bg-brown">
-      </div>
+      <div className="relative h-[150px] bg-brown"></div>
       <Hero />
       <Business />
       <Profile />
@@ -31,7 +29,7 @@ export default function Home() {
           sizes="100vw"
         />
         <div className="relative z-10">
-          <Awards />
+          <AwardsHome />
           <Maps />
           <Gallery />
         </div>
