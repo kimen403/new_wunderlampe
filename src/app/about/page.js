@@ -5,6 +5,7 @@ import { OurStory } from "@/components/OurStory";
 import { Awards } from "@/components/Awards";
 import { Footer } from "@/components/Footer";
 import { News } from "@/components/News";
+import { AwardsHome } from "@/components/AwardsHome";
 
 export default function AboutUsPage() {
   return (
@@ -48,6 +49,7 @@ export default function AboutUsPage() {
       <div className="bottom-gradient"></div>
       <HeroAbout />
       <OurStory />
+      <AwardsHome />
       <Awards />
       <News />
       <Footer />
