@@ -9,6 +9,7 @@ export function BusinessCard({
   linkOrder,
   linkMore,
   logoNumber,
+  btn_description,
 }) {
   const onClickMenu = () => {
     window.location.href = linkMenu;
@@ -60,13 +61,7 @@ export function BusinessCard({
                   onClick={onClickMenu}
                   className="h-[32px]  cursor-pointer hover:scale-105 md:h-[36px] bg-[#B9873B] text-[#FFFFFF] rounded-2xl px-6 md:px-8 text-sm md:text-base font-poppins font-bold button-shadow"
                 >
-                  {t(`business.locations.${locationType}.buttons.weekTrier`)}
-                </button>
-                <button
-                  onClick={onClickOrder}
-                  className="h-[32px] cursor-pointer hover:scale-105 md:h-[36px] bg-[#B9873B] text-[#FFFFFF] rounded-2xl px-6 md:px-8 text-sm md:text-base font-poppins font-bold button-shadow"
-                >
-                  {t(`business.locations.${locationType}.buttons.weekKenn`)}
+                  {btn_description}
                 </button>
                 <button
                   onClick={onClickMore}

@@ -9,6 +9,7 @@ import { Maps } from "@/components/Maps";
 import { Footer } from "@/components/Footer";
 import { Gallery } from "@/components/Gallery";
 import { AwardsHome } from "@/components/AwardsHome";
+import { News } from "@/components/News";
 
 export default function Home() {
   const { t } = useLanguage();
@@ -30,11 +31,12 @@ export default function Home() {
         />
         <div className="relative z-10">
           <AwardsHome />
+          <News />
           <Maps />
           <Gallery />
         </div>
+        <Footer />
       </section>
-      <Footer />
     </main>
   );
 }

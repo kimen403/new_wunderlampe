@@ -29,11 +29,11 @@ export function OurStory() {
       <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-12">
         Our Story
       </h2>
-      <div className="space-y-16">
+      <div className="space-y-12">
         {storyItems.map((item, index) => (
           <div
             key={index}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
+            className="grid grid-cols-1 bg-brown p-20 rounded-2xl lg:grid-cols-2 gap-8 items-center"
           >
             {index % 2 === 0 ? (
               <>
