@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
+import { SocialBar } from "./SocialBar";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade } from "swiper/modules";
 import "swiper/css";
@@ -44,47 +44,7 @@ export function Hero() {
       </Swiper>
 
       {/* Social Media Bar */}
-      <div className="absolute hidden md:flex flex-col gap-6 z-20 left-8 md:left-23 bottom-12 md:bottom-18">
-        <Link
-          href="https://www.facebook.com/wunderlampe.trier/?locale=de_DE"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            src="/hero-fb.png"
-            alt="Facebook"
-            width={48}
-            height={48}
-            className="w-12 h-12 md:w-[68px] md:h-[68px] hover:scale-110 transition-transform"
-          />
-        </Link>
-        <Link
-          href="https://www.instagram.com/die_wunderlampe_trier/?hl=de"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            src="/hero-ig.png"
-            alt="Instagram"
-            width={48}
-            height={48}
-            className="w-12 h-12 md:w-[68px] md:h-[68px] hover:scale-110 transition-transform"
-          />
-        </Link>
-        <Link
-          href="https://tiktok.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            src="/hero-tt.png"
-            alt="TikTok"
-            width={48}
-            height={48}
-            className="w-12 h-12 md:w-[68px] md:h-[68px] hover:scale-110 transition-transform"
-          />
-        </Link>
-      </div>
+      <SocialBar className="absolute hidden md:flex z-20 left-8 md:left-[92px] bottom-12 md:bottom-[72px]" />
     </section>
   );
 }
