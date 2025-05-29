@@ -25,6 +25,7 @@ export function Footer() {
             alt="Logo"
             width={320}
             height={150}
+            unoptimized
             className="object-contain "
             priority
           />

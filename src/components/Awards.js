@@ -6,39 +6,43 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { useLanguage } from "@/context/LanguageContext";
+import Image from "next/image";
 
 const awardsData = [
   {
-    link: "https://www.youtube.com/embed/je0fOPmMjvA?si=4I26HuA6T0H_zmx0",
+    title: "Award 1",
+    image: "/awards/1.png",
+    description:
+      "Our restaurant is now officially Halal certified, ensuring all our dishes meet the highest standards of Halal preparation. This certification reflects our commitment to quality, cleanliness, and respect for our customers' dietary needs. Every ingredient and cooking process has been carefully reviewed and approved by certified authorities. We're proud to serve meals that everyone can enjoy with confidence. Come and experience the taste of trust and authenticity in every bite.",
   },
   {
-    link: "https://www.youtube.com/embed/7ptsAJzm52k?si=WcKoCz7K0c-EJHEQ",
+    title: "Award 2",
+    image: "/awards/award5.png",
+    description:
+      "Our restaurant is now officially Halal certified, ensuring all our dishes meet the highest standards of Halal preparation. This certification reflects our commitment to quality, cleanliness, and respect for our customers' dietary needs. Every ingredient and cooking process has been carefully reviewed and approved by certified authorities. We're proud to serve meals that everyone can enjoy with confidence. Come and experience the taste of trust and authenticity in every bite.",
   },
   {
-    link: "https://www.youtube.com/embed/ISANNSh74OA?si=VdxK5fNUtJubIwZs",
+    title: "Award 3",
+    image: "/awards/3.png",
+    description:
+      "Our restaurant is now officially Halal certified, ensuring all our dishes meet the highest standards of Halal preparation. This certification reflects our commitment to quality, cleanliness, and respect for our customers' dietary needs. Every ingredient and cooking process has been carefully reviewed and approved by certified authorities. We're proud to serve meals that everyone can enjoy with confidence. Come and experience the taste of trust and authenticity in every bite.",
   },
   {
-    link: "https://www.youtube.com/embed/rDfl-1c8ThU?si=g9kxoId1S-BaIck7",
+    title: "Award 4",
+    image: "/awards/4.png",
+    description:
+      "Our restaurant is now officially Halal certified, ensuring all our dishes meet the highest standards of Halal preparation. This certification reflects our commitment to quality, cleanliness, and respect for our customers' dietary needs. Every ingredient and cooking process has been carefully reviewed and approved by certified authorities. We're proud to serve meals that everyone can enjoy with confidence. Come and experience the taste of trust and authenticity in every bite.",
+  },
+  {
+    title: "Award 5",
+    image: "/awards/5.png",
+    description:
+      "Our restaurant is now officially Halal certified, ensuring all our dishes meet the highest standards of Halal preparation. This certification reflects our commitment to quality, cleanliness, and respect for our customers' dietary needs. Every ingredient and cooking process has been carefully reviewed and approved by certified authorities. We're proud to serve meals that everyone can enjoy with confidence. Come and experience the taste of trust and authenticity in every bite.",
   },
 ];
 
 export function Awards() {
   const { t } = useLanguage();
-  const [activeVideo, setActiveVideo] = useState(null);
-  const videos = useRef({});
-
-  const handleSlideChange = (swiper) => {
-    // Pause all videos first
-    Object.keys(videos.current).forEach(key => {
-      if (videos.current[key]) {
-        const iframe = videos.current[key];
-        iframe.contentWindow.postMessage(
-          JSON.stringify({ event: 'command', func: 'pauseVideo' }), '*'
-        );
-      }
-    });
-    setActiveVideo(swiper.realIndex);
-  };
 
   return (
     <section className="w-full bg-brown py-6 md:py-8 lg:py-12 px-4 md:px-[50px]">
@@ -46,31 +50,41 @@ export function Awards() {
         {t("video.title")}
       </h2>
       <div className="max-w-[1200px] text-teal-50 mx-auto">
-        <div className="swiper-container">
-          <Swiper
-            centeredSlides={true}
-            navigation={true}
-            modules={[Navigation]}
-            onSlideChange={handleSlideChange}
-            className="!flex !items-center !justify-center"
-          >
-            {awardsData.map((award, index) => (
-              <SwiperSlide key={index} className="!flex !justify-center !items-center py-4 !w-full">
-                <div className="w-full max-w-[650px] aspect-video mx-auto">
-                  <iframe 
-                    ref={el => videos.current[index] = el}
-                    className="w-full h-full"
-                    src={`${award.link}&enablejsapi=1`}
-                    title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerPolicy="strict-origin-when-cross-origin"
-                    allowFullScreen
+        <Swiper
+          pagination={{
+            clickable: true,
+            type: "fraction",
+          }}
+          centeredSlides={true}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
+          navigation={true}
+          modules={[Autoplay, Navigation]}
+          className=""
+        >
+          {awardsData.map((award, index) => (
+            <SwiperSlide key={index}>
+              <div className="grid grid-cols-1 p-10 md:grid-cols-2 gap-8 items-center">
+                <div className="prose max-w-none order-2 md:order-1">
+                  <h3 className="text-2xl font-bold mb-4">{award.title}</h3>
+                  <p className="text-lg leading-relaxed">{award.description}</p>
+                </div>
+                <div className="relative hover:scale-2xl flex justify-center items-center order-1 md:order-2 mb-6 md:mb-0">
+                  <Image
+                    src={award.image}
+                    alt={`Award ${index + 1}`}
+                    width={185}
+                    height={263}
+                    className="w-auto h-auto object-contain mx-auto"
+                    priority
                   />
                 </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </section>
   );

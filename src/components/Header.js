@@ -68,6 +68,7 @@ export function Header() {
                 width={107}
                 height={52}
                 priority
+                unoptimized
                 className="object-contain "
               />
             </div>

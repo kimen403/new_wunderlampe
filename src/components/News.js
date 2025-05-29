@@ -15,7 +15,6 @@ import "swiper/css/effect-coverflow";
 import { useLanguage } from "@/context/LanguageContext";
 
 export function News() {
-  const { t } = useLanguage();
   return (
     <section className="w-full  py-4 sm:py-6 md:py-8 lg:py-12 px-2 sm:px-4 md:px-[50px]">
       <h2 className="text-teal-50 py-4 sm:py-6 md:py-10 text-center text-2xl md:text-3xl lg:text-4xl font-extrabold text-shadow">
@@ -38,6 +37,7 @@ export function News() {
           autoplay={{
             delay: 3000,
             disableOnInteraction: false,
+            pauseOnMouseEnter: true,
           }}
           pagination={{ clickable: true }}
           modules={[Autoplay, EffectCoverflow, Pagination]}
