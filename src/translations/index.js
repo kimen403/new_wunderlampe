@@ -86,6 +86,9 @@ export const translations = {
     awards: {
       title: "Awards & Recognition",
     },
+    video : {
+      title: "Our interview with mein LOKAL dein LOKAL"
+    },
     maps: {
       title: "We look forward to welcoming you",
       description: "Here you can find our locations",
@@ -94,6 +97,9 @@ export const translations = {
       social: "find us here :",
       copyright: "©2025 Die Wunderlampe. All Rights Reserved.",
       credits: "Design & Produced by The Ritz Media.",
+    },
+    runningtext: {
+      title : "🚧 This website is still under development and not finished yet! Some features might not work as expected. 🚧"
     },
   },
 
@@ -183,6 +189,9 @@ export const translations = {
     awards: {
       title: "Auszeichnungen & Anerkennung",
     },
+     video : {
+      title: "Unser interview mit mein LOKAL dein LOKAL"
+    },
     maps: {
       title: "Wir freuen uns darauf, dich bei uns Willkommen zu heißen",
       description: "Hier findest du unsere Standorten",
@@ -191,6 +200,9 @@ export const translations = {
       social: "finde uns hier :",
       copyright: "©2025 Die Wunderlampe. Alle Rechte vorbehalten.",
       credits: "Design & Produced by The Ritz Media.",
+    },
+    runningtext: {
+      title : "🚧 Diese Website befindet sich noch in der Entwicklung und ist noch nicht fertig! Einige Funktionen funktionieren möglicherweise nicht wie erwartet. 🚧"
     },
   },
 };

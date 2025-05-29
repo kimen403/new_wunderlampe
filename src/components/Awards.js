@@ -43,7 +43,7 @@ export function Awards() {
   return (
     <section className="w-full bg-brown py-6 md:py-8 lg:py-12 px-4 md:px-[50px]">
       <h2 className="text-teal-50 py-6 md:py-10 text-center text-2xl md:text-3xl lg:text-4xl font-extrabold w-full text-shadow">
-        {t("awards.title")}
+        {t("video.title")}
       </h2>
       <div className="max-w-[1200px] text-teal-50 mx-auto">
         <div className="swiper-container">
