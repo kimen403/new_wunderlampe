@@ -1,25 +1,39 @@
-"use client";
+'use client';
 
+import { useState } from "react";
 import Image from "next/image";
+import { SocialBar } from "./SocialBar";
 
 export function FloatingButton() {
-  const scrollToFooter = () => {
-    document.querySelector("footer").scrollIntoView({ behavior: "smooth" });
+  const [showSocial, setShowSocial] = useState(false);
+
+  const toggleSocial = () => {
+    setShowSocial(!showSocial);
   };
 
   return (
-    <button
-      onClick={scrollToFooter}
-      className="fixed bottom-2 right-2 md:bottom-2 md:right-2 z-50 hover:scale-110 transition-transform cursor-pointer"
-    >
-      <Image
-        src="/float.png"
-        alt="Scroll to Footer"
-        width={90}
-        height={90}
-        className="w-[90px] h-[90px] md:w-[125px] md:h-[125px] animate-rotate"
-        priority
-      />
-    </button>
+    <div className="fixed bottom-4 right-4 md:bottom-8 md:right-8 z-50 flex flex-col items-center">
+      {/* Social Bar with slide animation */}
+      <div className={`transition-all duration-300 transform ${
+        showSocial ? 'opacity-100 mb-4' : 'opacity-0 pointer-events-none translate-y-full'
+      }`}>
+        <SocialBar className="flex flex-col items-center gap-4" />
+      </div>
+
+      {/* Float Button - always rotating */}
+      <button
+        onClick={toggleSocial}
+        className="hover:scale-110 transition-transform"
+      >
+        <Image
+          src="/float.png"
+          alt="Toggle Social"
+          width={90}
+          height={90}
+          className="w-[70px] h-[70px] md:w-[100px] md:h-[100px] animate-rotate"
+          priority
+        />
+      </button>
+    </div>
   );
 }

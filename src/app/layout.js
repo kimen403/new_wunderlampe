@@ -2,6 +2,7 @@ import { Aladin, JetBrains_Mono, Poppins } from "next/font/google";
 import { LanguageProvider } from "@/context/LanguageContext";
 import { Header } from "@/components/Header";
 import { FloatingButton } from "@/components/FloatingButton";
+import { RunningText } from "@/components/RunningText";
 import "./globals.css";
 
 const aladin = Aladin({
@@ -61,6 +62,7 @@ export default function RootLayout({ children }) {
         className={`${poppins.className} antialiased bg-brown max-w-[1400px] mx-auto font-poppins`}
       >
         <LanguageProvider>
+          <RunningText />
           <Header />
           {children}
           <FloatingButton />
