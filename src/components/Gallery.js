@@ -42,8 +42,8 @@ export function Gallery() {
               <Image
                 src="/img2.png"
                 alt="Gallery Image 2"
-                width={402}
-                height={268}
+                width={305}
+                height={204}
                 className="object-cover"
                 priority
               />

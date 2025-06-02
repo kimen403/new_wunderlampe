@@ -12,6 +12,19 @@ export const translations = {
       languageToggle: "Switch to Deutsch",
       reservation: "RESERVATION",
     },
+    about: {
+      title1: "Welcome to Die Wunderlampe",
+      section1 : "My name is Mustafa Ghasheem, and I'm the good genie from the Magic Lamp. You can find me everywhere—as a chef, as a waiter, or behind the counter. As the owner of the Magic Lamp, it's important to me to offer our guests an authentic experience of Syrian cuisine—just as if they were being invited to dinner with a Syrian family.",
+
+      title2: "Our Beginning",
+      section2 : "I came to Germany as a war refugee in 2015. I entered the German job market through the restaurant industry. A few years later, I turned necessity into a virtue and founded the oriental restaurant „Die Wunderlampe“.",
+
+      title3: "Growing Together",
+      section3 : "The Wunderlampe has since expanded. Oriental dishes can also be found at the „Wunderlämpchen“ in Trier's pedestrian zone and in the canteens of the Chamber of Crafts in Trier-Nord and Kenn. Our catering service and our pizza delivery service, „Pizzawunder“ also deliver a variety of dishes to your home.",
+
+      title4: "Today's Success",
+      section4 : "For me, the magic lamp represents a piece of home in Trier. Conversely, I hope to take you on a culinary short trip to my homeland, Syria, during your visit.",
+    },
     business: {
       locations: {
         restaurant: {
@@ -111,6 +124,19 @@ export const translations = {
       about: "ÜBER UNS",
       gallery: "GALERIE",
       contact: "KONTAKT",
+    },
+    about: {
+      title1: "Willkommen bei Die Wunderlampe",
+      section1 : "Mein Name ist Mustafa Ghasheem und ich bin der gute Geist aus der Wunderlampe. Sie finden mich überall - als Koch, als Kellner oder hinter der Theke. Als Inhaber der Wunderlampe ist es mir wichtig, unseren Gästen eine authentische Erfahrung der syrischen Küche bieten - ganz so, als wären sie bei einer syrischen Familie zum Essen eingeladen.",
+
+      title2: "Unser Anfang",
+      section2 : "Im Jahr 2015 bin ich als Kriegsflüchtling nach Deutschland gekommen. Über die Gastronomie bin ich in den deutschen Arbeitsmarkt eingestiegen. Ein paar Jahre später habe ich dann die Not zur Tugend gemacht und das orientalische Restaurant „Die Wunderlampe“ gegründet.",
+
+      title3: "Gemeinsam wachsen",
+      section3 : "Inzwischen ist die Wunderlampe expandiert. Orientalische Speisen finden Sie auch im „Wunderlämpchen“ in der Trierer Fußgängerzone und in den Kantinen der Handwerkskammer in Trier-Nord und Kenn. Außerdem liefern unser Cateringservice als auch unser Pizzaservice „Pizzawunder“ eine Vielzahl von Speisen zu Ihnen nach Hause.",
+
+      title4: "Der heutige Erfolg",
+      section4 : "Für mich bedeutet die Wunderlampe ein Stück Heimat in Trier. Umgekehrt wünsche ich mir, Sie bei Ihrem Besuch auf einen kulinarischen Kurztrip in meine Heimat Syrien mitzunehmen.",
     },
     buttons: {
       languageToggle: "Switch to English",

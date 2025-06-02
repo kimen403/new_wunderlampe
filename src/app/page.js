@@ -20,7 +20,7 @@ export default function Home() {
       <Hero />
       <Business />
       <Profile />
-      <section className="relative h-auto min-h-[850px] md:min-h-[1250px] lg:h-[1750px]">
+      <section className="relative h-auto min-h-[850px] md:min-h-[1250px] lg:h-full">
         <Image
           src="/bg.png"
           alt=""
@@ -35,8 +35,8 @@ export default function Home() {
           <Maps />
           <Gallery />
         </div>
-        <Footer />
       </section>
+      <Footer />
     </main>
   );
 }
