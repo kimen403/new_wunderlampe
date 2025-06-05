@@ -51,7 +51,7 @@ export function Business() {
       index: 4,
       type: "hwk",
       logo: 6,
-      linkMenu: "",
+      linkMenu: "/menu/menu_hwk.pdf",
       btn_description: t("business.locations.hwk.buttons.weekTrier"),
       linkOrder: "",
       linkMore: "",
