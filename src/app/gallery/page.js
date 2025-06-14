@@ -9,6 +9,7 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import { useLanguage } from "@/context/LanguageContext";
+import { Footer } from "@/components/Footer";
 
 const galleryImages = [
   "/gallery/_DSC0124.JPG",
@@ -97,6 +98,153 @@ export default function GalleryPage() {
         </p>
 
         <div className="relative bg-black/30 p-4 sm:p-6 md:p-8 rounded-lg backdrop-blur-sm">
+        <p className="text-xl font-bold text-gray-100 text-center max-w-3xl mx-auto mb-12">
+          Die Wunderlampe
+        </p>
+          <Swiper
+            style={{
+              "--swiper-navigation-color": "#fff",
+              "--swiper-pagination-color": "#fff",
+            }}
+            spaceBetween={10}
+            navigation={true}
+            thumbs={{ swiper: thumbsSwiper }}
+            modules={[FreeMode, Navigation, Thumbs]}
+            className="w-full h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] mb-2 sm:mb-4 rounded-xl overflow-hidden"
+          >
+            {galleryImages.map((image, index) => (
+              <SwiperSlide key={index}>
+                <div className="relative w-full h-full">
+                  <Image
+                    src={image}
+                    alt={`Gallery image ${index + 1}`}
+                    sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                    fill
+                    className="object-cover h-full w-full rounded-xl"
+                    priority={index < 4}
+                  />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+
+          <Swiper
+            onSwiper={setThumbsSwiper}
+            spaceBetween={4}
+            slidesPerView={3}
+            breakpoints={{
+              640: {
+                slidesPerView: 4,
+                spaceBetween: 6,
+              },
+              768: {
+                slidesPerView: 5,
+                spaceBetween: 8,
+              },
+              1024: {
+                slidesPerView: 6,
+                spaceBetween: 10,
+              },
+            }}
+            freeMode={true}
+            watchSlidesProgress={true}
+            modules={[FreeMode, Navigation, Thumbs]}
+            className="h-16 sm:h-20 md:h-24"
+          >
+            {galleryImages.map((image, index) => (
+              <SwiperSlide
+                key={index}
+                className="opacity-50 hover:opacity-100 transition-opacity"
+              >
+                <div className="relative w-full h-full rounded overflow-hidden">
+                  <Image
+                    src={image}
+                    alt={`Thumbnail ${index + 1}`}
+                    fill
+                    className="object-cover hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+
+        <div className="relative mt-20 bg-black/30 p-4 sm:p-6 md:p-8 rounded-lg backdrop-blur-sm">
+        <p className="text-xl font-bold text-gray-100 text-center max-w-3xl mx-auto mb-12">
+          Das Wunderlämpchen
+        </p>
+          <Swiper
+            style={{
+              "--swiper-navigation-color": "#fff",
+              "--swiper-pagination-color": "#fff",
+            }}
+            spaceBetween={10}
+            navigation={true}
+            thumbs={{ swiper: thumbsSwiper }}
+            modules={[FreeMode, Navigation, Thumbs]}
+            className="w-full h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] mb-2 sm:mb-4 rounded-xl overflow-hidden"
+          >
+            {galleryImages.map((image, index) => (
+              <SwiperSlide key={index}>
+                <div className="relative w-full h-full">
+                  <Image
+                    src={image}
+                    alt={`Gallery image ${index + 1}`}
+                    sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                    fill
+                    className="object-cover h-full w-full rounded-xl"
+                    priority={index < 4}
+                  />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+
+          <Swiper
+            onSwiper={setThumbsSwiper}
+            spaceBetween={4}
+            slidesPerView={3}
+            breakpoints={{
+              640: {
+                slidesPerView: 4,
+                spaceBetween: 6,
+              },
+              768: {
+                slidesPerView: 5,
+                spaceBetween: 8,
+              },
+              1024: {
+                slidesPerView: 6,
+                spaceBetween: 10,
+              },
+            }}
+            freeMode={true}
+            watchSlidesProgress={true}
+            modules={[FreeMode, Navigation, Thumbs]}
+            className="h-16 sm:h-20 md:h-24"
+          >
+            {galleryImages.map((image, index) => (
+              <SwiperSlide
+                key={index}
+                className="opacity-50 hover:opacity-100 transition-opacity"
+              >
+                <div className="relative w-full h-full rounded overflow-hidden">
+                  <Image
+                    src={image}
+                    alt={`Thumbnail ${index + 1}`}
+                    fill
+                    className="object-cover hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+
+        <div className="relative mt-20 bg-black/30 p-4 sm:p-6 md:p-8 rounded-lg backdrop-blur-sm">
+        <p className="text-xl font-bold text-gray-100 text-center max-w-3xl mx-auto mb-12">
+          Catering
+        </p>
           <Swiper
             style={{
               "--swiper-navigation-color": "#fff",
@@ -200,6 +348,7 @@ export default function GalleryPage() {
           }
         }
       `}</style>
+      <Footer/>
     </main>
   );
 }
